@@ -1,0 +1,672 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #b0b0b0; /* gray background */
+  color: #f1f1f1;
+  padding-top: var(--nav-height);
+}
+
+
+  
+   :root {
+    --nav-bg: #0F2854;
+    --accent-color: #fefefe;
+  }
+
+ 
+
+  :root{
+  --nav-bg: #072448;
+  --accent-color: #ffffff;
+  --nav-height: 60px;
+}
+
+/* Basic reset + utility */
+*{box-sizing:border-box}
+body{ margin:0; font-family: system-ui, Arial, sans-serif; color:#fff; }
+
+/* Visually-hidden utility for inputs (keeps element operable) */
+.sr-only{
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Nav wrapper */
+.nav {
+  padding: 15px 20px;
+  background-color: var(--nav-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--accent-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: var(--nav-height);
+}
+
+/* LOGO: custom font + padding + perfect vertical centering */
+:root {
+  --logo-font: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --logo-font-size: 26px;   /* change to taste */
+  --logo-font-weight: 700;
+  --logo-padding-inline: 18px; /* left+right padding */
+}
+
+/* Ensure logo's anchor fills the nav height and is centered */
+.nav .logo {
+  display: inline-flex;      /* keep block inline behavior but allow centering */
+  align-items: center;
+  height: 100%;
+  padding-left: 0;           /* container padding; anchor has inline padding */
+  padding-right: 0;
+  margin: 0;
+}
+
+/* Style the link text itself */
+.nav .logo a {
+  font-family: var(--logo-font);
+  font-size: var(--logo-font-size);
+  font-weight: var(--logo-font-weight);
+  color: var(--accent-color); /* uses your existing accent color */
+  text-decoration: none;
+  padding: 0 var(--logo-padding-inline); /* left + right spacing */
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  line-height: 1;            /* avoid unexpected extra height */
+  letter-spacing: 0.2px;     /* optional */
+}
+
+/* On small screens you may want a smaller logo */
+@media (max-width: 768px) {
+  :root { --logo-font-size: 20px; --logo-padding-inline: 12px; }
+}
+/* Menu container */
+.menu { display: flex; gap: 20px; align-items: center; }
+.menu a, .dropbtn {
+  color: var(--accent-color);
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Underline hover effect */
+.menu a::after, .dropbtn::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  width: 0;
+  background-color: var(--accent-color);
+  bottom: -3px;
+  transition: all 0.3s ease;
+}
+.menu a:hover::after, .dropbtn:hover::after { width: 100%; }
+
+/* Dropdown container (scoped) */
+.dropdown { position: relative; z-index: 1600; }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--nav-bg);
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 0 0 8px 8px;
+  top: calc(var(--nav-height) + 4px);
+  left: 0;
+  z-index: 1500;
+  flex-direction: column;
+  padding: 8px 0;
+}
+.dropdown-content a {
+  padding: 12px 20px;
+  display: block;
+  color: var(--accent-color);
+  font-weight: normal;
+  border-bottom: 1px solid rgba(255, 159, 128, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+.dropdown-content a:last-child { border-bottom: none; }
+.dropdown-content a:hover {
+  background-color: var(--accent-color);
+  color: var(--nav-bg);
+  border-radius: 4px;
+}
+
+/* Show dropdown on hover for devices that support hover (desktop) */
+/* DESKTOP: open dropdown when hovering anywhere on dropdown */
+
+.dropdown .dropdown-toggle:checked ~ .dropdown-content {
+  display: flex;
+}
+
+
+
+/* Login icon */
+.login-icon { display: flex; align-items: center; color: var(--accent-color); text-decoration: none; font-size: 20px; transition: color 0.3s ease; }
+.login-icon:hover { color: #fbfaf9; }
+
+/* Hamburger styles */
+#menu-toggle { /* keep operable using sr-only; do not use display:none */ }
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--accent-color);
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.hamburger:hover { background: rgba(255,255,255,0.02); }
+
+/* Dropdown toggle - DO NOT hide with display:none.
+   The SR-only class hides it visually but keeps it operable */
+.dropdown-toggle { /* no styling here, sr-only will apply */ }
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Mobile menu becomes a vertical panel */
+  .menu {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+    display: none;
+  }
+
+  /* Show menu when hamburger checkbox is checked */
+  #menu-toggle:checked ~ .menu { display: flex; }
+
+  .menu a, .dropbtn {
+    padding: 10px 20px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 159, 128, 0.12);
+  }
+  .menu a:last-child, .dropbtn:last-child { border-bottom: none; }
+
+  /* Dropdown content: static in mobile flow but hidden by its own checkbox */
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: none;
+    border-radius: 0;
+    padding-left: 20px;
+    display: none; /* controlled by the dropdown's own checkbox inside the .dropdown */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Scoped: show only the dropdown-content that belongs to the checked input inside its .dropdown */
+  .dropdown .dropdown-toggle:checked ~ .dropdown-content {
+    display: flex;
+  }
+
+  /* Make dropdown button flex and add arrow */
+  .dropbtn { display: flex; justify-content: space-between; align-items: center; }
+
+  .dropbtn::after { content: "▼"; font-size: 12px; margin-left: 10px; transition: transform 0.3s ease; }
+
+  /* Rotate arrow when open - scoped to the checked input in the same .dropdown */
+  .dropdown .dropdown-toggle:checked + .dropbtn::after { transform: rotate(-180deg); }
+
+  /* Show hamburger */
+  .hamburger { display: block; }
+
+  /* Login icon adjustments on mobile */
+  .login-icon {
+    padding: 10px 20px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 159, 128, 0.12);
+  }
+
+  /* Small layout polish */
+  .menu { gap: 0; }
+  .courses-link { order: 3; } /* optional: set display order if desired */
+}
+
+/* Ensure the dropbtn/label is clickable and not covered */
+.dropbtn {
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+#container{
+   width: 100%;
+  min-height: calc(100vh + 200px);
+  background: url("../Images/bg.avif") no-repeat center center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  color: var(--d-grey);
+  position: relative;
+  width: 40%;
+  border-radius: 15px;
+  padding: 60px;
+  overflow: hidden;
+  transition: all .5s ease;
+
+ background-color: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+
+}
+
+
+form{
+    position: relative;
+    z-index: 1;
+}
+form h2{
+font-size:3rem ;
+color: var(--grey);
+}
+.inputbox{
+    position: relative;  
+    margin-top: 2rem;  width: 100%;
+
+}
+
+.inputbox span{
+    top: 5px;
+    left: 0;pointer-events: none;
+    font-size: 1.1rem;
+    transition: all .5s ease;
+
+    position: absolute;
+}
+
+.inputbox input,textarea{
+color: var(--d-grey);
+border: none;
+outline: none;
+resize: none;
+padding: 8px 0;
+background-color: transparent;
+width: 100%;
+border-bottom: 2px solid var(--d-grey);
+}
+.inputbox i{
+right: 0;
+top: 8px;
+position: absolute;
+font-size: 1rem;
+
+
+}
+.inputbox input:focus ~ span, .inputbox textarea:focus ~ span, 
+.inputbox input:valid ~ span, .inputbox textarea:valid ~ span{
+    font-size:0.9rem;
+transform: translateY(-19px);
+}
+.r-fcontainer{
+    margin-top: .6rem;
+display: flex;
+justify-content: space-between;
+font-weight: bolder;
+}
+.forget p:hover{
+text-decoration: underline;
+}
+
+
+
+
+.login-btn {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  line-height: 15px;
+  font-weight: 500;
+  color: var(--blue);
+  background: var(--d-grey);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.login-btn span{
+    color: var(--blue);
+}
+
+.login-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 100%;
+    color: var(--d-grey);
+  background: var(--blue);
+  transition: width 0.35s ease;
+}
+
+.login-btn:hover::after {
+  width: 100%;
+}
+.login-btn:hover span{
+color: white;}
+
+.login-btn span {
+  position: relative;
+  z-index: 1;
+    color: var(--blue);
+
+}
+
+.register{
+
+margin-top: .7rem;
+font-weight: bold;
+}
+.register:hover{
+    cursor: pointer;
+}
+.forget:hover{
+        cursor: pointer;
+
+}
+
+
+.footer {
+  background-color: #0f2854;
+  padding: 50px 80px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.footer-section {
+  flex: 1 1 280px;
+  margin: 0 20px;
+  min-width: 250px;
+}
+
+.footer h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #fcfbfb;
+  text-shadow: 0 0 8px #4e5357;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 14px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #d7d7d7;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.footer ul li a:hover {
+  color: #fdfcfc;
+  transform: translateX(8px);
+}
+
+.contact-info {
+  font-size: 1rem;
+  color: #d7d7d7;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info svg {
+  fill: #fdfdfc;
+  min-width: 20px;
+  min-height: 20px;
+  filter: drop-shadow(0 0 2px #605c5b);
+}
+
+/* Adjusted social icons for perfect alignment */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #faf9f9;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  color: #100f0f;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(255, 122, 61, 0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.15rem;
+}
+
+.social-icons a:hover {
+  background-color: #9195a8;
+  transform: scale(1.2);
+  box-shadow: 0 6px 20px rgba(92, 214, 255, 0.9);
+}
+
+.social-icons a:focus {
+  outline: 2px solid #827d79;
+  outline-offset: 3px;
+}
+
+.subscribe-text {
+  font-size: 1.1rem;
+  color: #d7d7d7;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.subscribe-form {
+  display: flex;
+  max-width: 360px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.subscribe-form input[type="email"] {
+  flex-grow: 1;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1rem;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #222;
+}
+
+.subscribe-form input::placeholder {
+  color: #999;
+}
+
+.subscribe-form button {
+  background-color: #060440;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 25px;
+  font-size: 1rem;
+  border-radius: 0 5px 5px 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #e1dedc;
+  box-shadow: 0 0 10px #020638;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: #070343;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(61, 97, 255, 0.7);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #090541;
+  transform: scale(1.2);
+  box-shadow: 0 6px 20px rgba(92, 122, 255, 0.9);
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #bbb;
+  background-color: #0f2854;
+  border-top: 1px solid #222a4d;
+}
+
+.copyright a {
+  color: #fdfcfc;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.copyright a:hover {
+  color: #4a4947;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+  }
+}
+/* Responsive styles for login form and container */
+@media (max-width: 1024px) {
+  #container {
+    margin-top: 1.5rem;
+  }
+  .form {
+    width: 60%;       /* wider on tablets */
+    padding: 40px;
+  }
+  form h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #container {
+    margin-top: 1rem;
+  }
+  .form {
+    width: 80%;       /* smaller width on phones */
+    padding: 30px;
+  }
+  form h2 {
+    font-size: 2rem;
+  }
+  .inputbox span {
+    font-size: 1rem;
+  }
+  .login-btn {
+    font-size: 18px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  #container {
+    margin-top: 0.8rem;
+  }
+  .form {
+    width: 95%;       /* almost full width on small phones */
+    padding: 20px 15px;
+  }
+  form h2 {
+    font-size: 1.7rem;
+  }
+  .inputbox span {
+    font-size: 0.9rem;
+  }
+  .login-btn {
+    font-size: 16px;
+    height: 36px;
+  }
+  .r-fcontainer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .remember, .forget {
+    font-weight: normal;
+  }
+  .forget p {
+    font-size: 0.9rem;
+  }
+}

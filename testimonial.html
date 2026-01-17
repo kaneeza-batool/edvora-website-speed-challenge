@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Program</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Google font for the logo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/testimonal.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+  <div class="nav">
+    <div class="logo"><a href="#">EdVora</a></div>
+
+    <!-- Hamburger checkbox (visually hidden but operable) -->
+    <input type="checkbox" id="menu-toggle" class="sr-only" />
+    <label for="menu-toggle" class="hamburger" aria-hidden="true">&#9776;</label>
+
+    <!-- Main menu -->
+    <nav class="menu" role="navigation" aria-label="Primary">
+      <a href="/index.html">Home</a>
+      <a href="/About.html">About</a>
+
+      <!-- Top-level Courses link (separate from Pages dropdown) -->
+      <a href="/courses.html" class="courses-link">Courses</a>
+
+      <!-- Dropdown: keep input, label and content together in this block -->
+      <div class="dropdown">
+        <!-- Checkbox toggle for this dropdown (visually hidden but still in DOM) -->
+        <input type="checkbox" id="dropdown-toggle-pages" class="dropdown-toggle sr-only" />
+        <label for="dropdown-toggle-pages" class="dropbtn" aria-haspopup="true">Pages</label>
+
+        <div class="dropdown-content" role="menu" aria-label="Pages submenu">
+          <a href="/Team.html" role="menuitem">Our Team</a>
+          <a href="/testimonial.html" role="menuitem">Testimonial</a>
+        </div>
+      </div>
+
+      <a href="contact.html">Contact</a>
+
+      <!-- Login icon -->
+      <a href="login.html" class="login-icon" aria-label="Login">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3z"/>
+          <path fill-rule="evenodd" d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+      </a>
+    </nav>
+  </div>
+    <!-- Review Section -->
+    <div class="container-fluid review-Section py-5 mb-5 mt-5">
+        <div class="container py-5">
+            <div>
+                <h1 class="text-center display-4 fw-bold text-white">Students Reviews</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center text-white ">
+                        <li class="breadcrumb-item">
+                            <a class="text-white" href="/index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Reviews</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xxl">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="display-5 fw-bold review-Heading">Success Stories</h1>
+                <p class="mb-3 review-Para">“Can EdVora courses help shape your future? Our students share their success
+                    stories.”</p>
+            </div>
+            <!-- TESTIMONIALS -->
+            <section class="testimonials mt-5 pt-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="customers-testimonials" class="owl-carousel">
+                                <!--TESTIMONIAL 1 -->
+                                <div class="item">
+                                    <div class="shadow-effect review-card position-relative p-4">
+                                        <div class="name-tag d-flex align-items-center">
+                                            <div class="reviewer-img">
+                                                <img src="/Images/imgg1.jpg" alt="">
+                                            </div>
+                                            <div class="name-bg">
+                                                <div class="name-text">
+                                                    <h6>John Carter</h6>
+                                                    <small>Web Development</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reviewContent mt-4 pt-3">
+                                            <p class="review-text mt-3 pt-3">
+                                                "SkillDex completely changed the way I code. The lessons were clear,
+                                                practical, and easy to follow. I now feel confident building real
+                                                websites."
+                                            </p>
+                                            <div class="review-rating custom-stars">
+                                                ★★★★☆
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--END OF TESTIMONIAL 1 -->
+                                <!--TESTIMONIAL 2 -->
+                                <div class="item">
+                                    <div class="shadow-effect review-card position-relative p-4">
+                                        <div class="name-tag d-flex align-items-center">
+                                            <div class="reviewer-img">
+                                                <img src="/Images/imgg3.jpg" alt="">
+                                            </div>
+                                            <div class="name-bg">
+                                                <div class="name-text">
+                                                    <h6>Luna Martin</h6>
+                                                    <small>UI/UX Design</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reviewContent mt-4 pt-3">
+                                            <p class="review-text mt-3 pt-3">
+                                                "The UI/UX course helped me understand how real users think. The
+                                                projects were fun and very professional. I loved the learning
+                                                experience."
+                                            </p>
+                                            <div class="review-rating custom-stars">
+                                                ★★★★★
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--END OF TESTIMONIAL 2 -->
+                                <!--TESTIMONIAL 3 -->
+                                <div class="item">
+                                    <div class="shadow-effect review-card position-relative p-4">
+                                        <div class="name-tag d-flex align-items-center">
+                                            <div class="reviewer-img">
+                                                <img src="/Images/imgg2.jpg" alt="">
+                                            </div>
+                                            <div class="name-bg">
+                                                <div class="name-text">
+                                                    <h6>Ahmed Khan</h6>
+                                                    <small>Graphic Designing</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reviewContent mt-4 pt-3">
+                                            <p class="review-text mt-3 pt-3">
+                                                "I learned Photoshop and Illustrator from scratch. The tutorials were
+                                                simple and very effective. Now I can create social media designs
+                                                easily."
+                                            </p>
+                                            <div class="review-rating custom-stars">
+                                                ★★★★☆
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--END OF TESTIMONIAL 3 -->
+                                <!--TESTIMONIAL 4 -->
+                                <div class="item">
+                                    <div class="shadow-effect review-card position-relative p-4">
+                                        <div class="name-tag d-flex align-items-center">
+                                            <div class="reviewer-img">
+                                                <img src="/Images/imgg4.jpg" alt="">
+                                            </div>
+                                            <div class="name-bg">
+                                                <div class="name-text">
+                                                    <h6>Sarah William</h6>
+                                                    <small>Cyber Security</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reviewContent mt-4 pt-3">
+                                            <p class="review-text mt-3 pt-3">
+                                                "This Cyber Security course helped me understand how to protect data,
+                                                secure networks, and stop cyber attacks. The lessons were clear and very
+                                                useful for real-world skills.”
+                                            </p>
+                                            <div class="review-rating custom-stars">
+                                                ★★★★☆
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--END OF TESTIMONIAL 4 -->
+                                <!--TESTIMONIAL 5 -->
+                                <div class="item">
+                                    <div class="shadow-effect review-card position-relative p-4">
+                                        <div class="name-tag d-flex align-items-center">
+                                            <div class="reviewer-img">
+                                                <img src="/Images/imgg1.jpg" alt="">
+                                            </div>
+                                            <div class="name-bg mt-15">
+                                                <div class="name-text">
+                                                    <h6>David Miller</h6>
+                                                    <small>Agentic AI</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reviewContent mt-4 pt-3">
+                                            <p class="review-text mt-3 pt-3">
+                                                “The Agentic AI course helped me understand how to create smart AI
+                                                systems that can work independently and solve problems.”
+                                            </p>
+                                            <div class="review-rating custom-stars">
+                                                ★★★★☆
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--END OF TESTIMONIAL 5 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END OF TESTIMONIALS -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <h3>Quick Link</h3>
+                <ul>
+                    <li><a href="/About.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-condition.html">Terms &amp; Condition</a></li>
+                    <li><a href="/FAQs-help.css">FAQs &amp; Help</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="contact-info">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+        <path
+            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+    </svg>
+    <a href="https://www.google.com/maps/search/?api=1&query=City+Point+Sukkur"
+       target="_blank" rel="noopener"
+       style="color:inherit; text-decoration:none;">
+        123, City Point, Sukkur
+    </a>
+</div>
+
+                <div class="contact-info">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+        <path
+            d="M6.62 10.79a15.91 15.91 0 0 0 6.59 6.59l1.84-1.84a1 1 0 0 1 1.11-.21c1.2.48 2.5.74 3.85.74a1 1 0 0 1 1 1v3.25a1 1 0 0 1-1 1C10.07 21.75 2.25 13.93 2.25 4a1 1 0 0 1 1-1h3.25a1 1 0 0 1 1 1c0 1.35.25 2.65.74 3.85a1 1 0 0 1-.21 1.11z" />
+    </svg>
+    <a href="tel:+921000000000"
+       style="color:inherit; text-decoration:none;">
+        +92 1000000000
+    </a>
+</div>
+
+                <div class="contact-info" style="gap: 8px">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+        <path
+            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5z" />
+    </svg>
+    <a href="mailto:maliktooba26@gmail.com"
+       style="color:inherit; text-decoration:none;">
+        maliktooba26@gmail.com
+    </a>
+</div>
+
+                <div class="social-icons" aria-label="Social media links">
+                    <a href="#" title="Twitter" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" title="Facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" title="YouTube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Subscribe to our Newsletter</h3>
+                <p class="subscribe-text">
+                    Subscribe now and join our growing community of learners committed
+                    to lifelong education!
+                </p>
+                <form class="subscribe-form" action="#" method="post" id="subscribeForm">
+                    <input type="email" placeholder="Your email" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <button class="back-to-top" aria-label="Back to top" title="Back to top" id="backToTop">
+            &#8679;
+        </button>
+
+        <div class="copyright">
+            &copy;
+            <a href="/index.html" target="_blank" rel="noopener noreferrer">EdVora</a>, All
+            Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+    <script src="/testimonal.js"></script>
+</body>
+
+</html>

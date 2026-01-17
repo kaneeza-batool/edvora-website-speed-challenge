@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animated Footer</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google font for the logo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="nav">
+      <div class="logo"><a href="#">EdVora</a></div>
+
+      <!-- Hamburger checkbox (visually hidden but operable) -->
+      <input type="checkbox" id="menu-toggle" class="sr-only" />
+      <label for="menu-toggle" class="hamburger" aria-hidden="true"
+        >&#9776;</label
+      >
+
+      <!-- Main menu -->
+      <nav class="menu" role="navigation" aria-label="Primary">
+        <a href="/index.html">Home</a>
+        <a href="/About.html">About</a>
+
+        <!-- Top-level Courses link (separate from Pages dropdown) -->
+        <a href="/courses.html" class="courses-link">Courses</a>
+
+        <!-- Dropdown: keep input, label and content together in this block -->
+        <div class="dropdown">
+          <!-- Checkbox toggle for this dropdown (visually hidden but still in DOM) -->
+          <input
+            type="checkbox"
+            id="dropdown-toggle-pages"
+            class="dropdown-toggle sr-only"
+          />
+          <label
+            for="dropdown-toggle-pages"
+            class="dropbtn"
+            aria-haspopup="true"
+            >Pages</label
+          >
+
+          <div class="dropdown-content" role="menu" aria-label="Pages submenu">
+            <a href="Team.html" role="menuitem">Our Team</a>
+            <a href="testimonial.html" role="menuitem">Testimonial</a>
+          </div>
+        </div>
+
+        <a href="contact.html">Contact</a>
+
+        <!-- Login icon -->
+        <a href="login.html" class="login-icon" aria-label="Login">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            aria-hidden="true"
+          >
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3z" />
+            <path fill-rule="evenodd" d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bootstrap Carousel -->
+    <div
+      id="heroCarousel"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+      data-bs-interval="2000"
+    >
+      <div class="carousel-inner">
+        <!-- SLIDE 1 -->
+        <div class="carousel-item active">
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+            class="d-block w-100"
+            alt=""
+          />
+          <div class="carousel-caption custom-caption">
+            <span class="badge-top">BEST E-LEARNING PLATFORM</span>
+            <h1 class="animate-text">
+              Learn Job ready skills<br />
+              from free online courses<br />
+              with certificates
+            </h1>
+            <p class="animate-text delay-1">
+              Explore a wide range of courses designed to enhance your expertise
+              in technology, business, arts, and more. Start learning today!
+            </p>
+            <div class="hero-buttons animate-text delay-2">
+              <a href="./About.html" class="btn btn-orange">Read More</a>
+              <a href="./login.html" class="btn btn-light">Join Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+            class="d-block w-100"
+            alt=""
+          />
+          <div class="carousel-caption custom-caption">
+            <span class="badge-top">BEST E-LEARNING PLATFORM</span>
+            <h1 class="animate-text">
+              Learn Job ready skills<br />
+              from free online courses<br />
+              with certificates
+            </h1>
+            <p class="animate-text delay-1">
+              Explore a wide range of courses designed to enhance your expertise
+              in technology, business, arts, and more. Start learning today!
+            </p>
+            <div class="hero-buttons animate-text delay-2">
+              <a href="#" class="btn btn-orange">Read More</a>
+              <a href="#" class="btn btn-light">Join Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            class="d-block w-100"
+            alt=""
+          />
+          <div class="carousel-caption custom-caption">
+            <span class="badge-top">BEST E-LEARNING PLATFORM</span>
+            <h1 class="animate-text">
+              Learn Job ready skills<br />
+              from free online courses<br />
+              with certificates
+            </h1>
+            <p class="animate-text delay-1">
+              Explore a wide range of courses designed to enhance your expertise
+              in technology, business, arts, and more. Start learning today!
+            </p>
+            <div class="hero-buttons animate-text delay-2">
+              <a href="#" class="btn btn-orange">Read More</a>
+              <a href="#" class="btn btn-light">Join Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">
+      <h1>Invest in your professional goals</h1>
+      <p>Learn smarter, save more, and earn unlimited certificates</p>
+    </div>
+
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="card-front">
+            <img src="https://img.icons8.com/fluency/96/graduation-cap.png" />
+            <h3>Learn anything</h3>
+            <p>Explore trending topics and advance your skills</p>
+          </div>
+          <div class="card-back">
+            <h3>Learn Anything</h3>
+            <p>
+              Access thousands of courses across multiple domains and grow at
+              your own pace.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="card-front">
+            <img src="https://img.icons8.com/fluency/96/money.png" />
+            <h3>Save money</h3>
+            <p>Spend less when learning multiple courses</p>
+          </div>
+          <div class="card-back">
+            <h3>Save Money</h3>
+            <p>
+              One subscription gives you access to unlimited learning
+              opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="card-front">
+            <img
+              src="https://img.icons8.com/fluency/96/artificial-intelligence.png"
+            />
+            <h3>Flexible learning</h3>
+            <p>Learn anytime, anywhere</p>
+          </div>
+          <div class="card-back">
+            <h3>Flexible Learning</h3>
+            <p>
+              Switch courses anytime and learn at a speed that fits your
+              schedule.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="card-front">
+            <img src="https://img.icons8.com/fluency/96/certificate.png" />
+            <h3>Unlimited certificates</h3>
+            <p>Earn certificates at no extra cost</p>
+          </div>
+          <div class="card-back">
+            <h3>Unlimited Certificates</h3>
+            <p>
+              Get certified for every course you complete and boost your career.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="about-section">
+      <div class="about-img">
+        <img
+          src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=900&q=80"
+          alt="SkillDex Learning"
+        />
+      </div>
+
+      <div class="about-content">
+        <span>ABOUT US</span>
+        <h2>Welcome to SkillDex</h2>
+
+        <p>
+          At SkillDex, we believe in accessible, innovative learning experiences
+          that adapt to your schedule and learning style.
+        </p>
+
+        <p>
+          Our mission is to empower learners worldwide by providing expert-led
+          courses, interactive sessions, and globally recognized certifications.
+        </p>
+
+        <ul class="features">
+          <li>Expert Instructors</li>
+          <li>Live Interactive Sessions</li>
+          <li>Comprehensive Course Catalog</li>
+          <li>Community Engagement</li>
+          <li>Personalized Learning Paths</li>
+          <li>Certification & Recognition</li>
+        </ul>
+
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </section>
+    <section class="hero-container">
+      <div class="hero-content">
+        <div class="text-section">
+          <h1 class="animate-fade-up">Explore Free Courses</h1>
+          <p class="animate-fade-up delay-1">
+            Start your online learning journey at Great Learning Academy for
+            free with our short-term basic courses across various in-demand
+            domains.
+          </p>
+          <a href="#" class="cta-button animate-fade-up delay-2"
+            >Start For Free</a
+          >
+        </div>
+        <div class="image-section animate-reveal">
+          <img
+            src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            alt="Learning online"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <!-- Header Section with Vertical Entry -->
+      <div class="header-section animate-v-slide">
+        <div class="badge">
+          <span class="line"></span>
+          <span class="badge-text">CATEGORIES</span>
+          <span class="line"></span>
+        </div>
+        <h2 class="title">Popular Topics to Explore</h2>
+      </div>
+
+      <!-- Horizontal Forever Marquee -->
+      <div class="marquee-wrapper">
+        <div class="marquee-content">
+          <!-- Set 1 -->
+          <div class="card">
+            <div class="icon-circle excel">
+              <i class="fa-solid fa-file-excel"></i>
+            </div>
+            <h3>Microsoft Excel</h3>
+          </div>
+          <div class="card">
+            <div class="icon-circle aws"><i class="fa-brands fa-aws"></i></div>
+            <h3>AWS Cloud</h3>
+          </div>
+          <div class="card">
+            <div class="icon-circle python">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <h3>Python Pro</h3>
+          </div>
+          <div class="card">
+            <div class="icon-circle java">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <h3>Java Core</h3>
+          </div>
+          <div class="card">
+            <div class="icon-circle web"><i class="fa-solid fa-code"></i></div>
+            <h3>Web Design</h3>
+          </div>
+          <div class="card">
+            <div class="icon-circle db">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3>MySQL DB</h3>
+          </div>
+
+          <!-- Set 2 (Duplicate for Seamless Loop) -->
+          <div class="card">
+            <div class="icon-circle excel">
+              <i class="fa-solid fa-file-excel"></i>
+            </div>
+            <h3>Microsoft Excel</h3>
+          </div>
+          <div class="card">
+            <div class="icon-circle aws"><i class="fa-brands fa-aws"></i></div>
+            <h3>AWS Cloud</h3>
+          </div>
+          <div class="card">
+            <div class="icon-circle python">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <h3>Python Pro</h3>
+          </div>
+          <div class="card">
+            <div class="icon-circle java">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <h3>Java Core</h3>
+          </div>
+          <div class="card">
+            <div class="icon-circle web"><i class="fa-solid fa-code"></i></div>
+            <h3>Web Design</h3>
+          </div>
+          <div class="card">
+            <div class="icon-circle db">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3>MySQL DB</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="video-marquee">
+      <h2>Explore EDVORA Video Courses</h2>
+
+      <!-- ROW 1 -->
+      <div class="marquee marquee-left">
+        <div class="track">
+          <div class="video-card">
+            <video muted loop autoplay>
+              <source
+                src="/videos/UX Design Basics _ Simplilearn.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>UI/UX Designing with AI</p>
+          </div>
+
+          <div class="video-card">
+            <video muted loop autoplay>
+              <source
+                src="/videos/What Is Web Development And It's Future _ Web Development in 2026 _ Web Development _ Simplilearn.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>Web Development</p>
+          </div>
+
+          <div class="video-card">
+            <video muted loop autoplay>
+              <source
+                src="/videos/What Is Cyber Security _ How It Works_ _ Cyber Security In 7 Minutes _ Cyber Security _ Simplilearn.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>Cyber Security</p>
+          </div>
+
+          <!-- duplicate for seamless loop -->
+          <div class="video-card">
+            <video muted loop autoplay>
+              <source
+                src="/videos/Agentic AI Explained in 3 Minutes.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>Agentic AI</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2 -->
+      <div class="marquee marquee-right">
+        <div class="track">
+          <div class="video-card">
+            <video muted loop autoplay>
+              <source
+                src="/videos/What is Data Science _ Introduction to Data Science in 2 Minutes _ Data Science Training _ Edureka.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>Data Science</p>
+          </div>
+
+          <div class="video-card">
+            <video muted loop autoplay>
+              <source
+                src="/videos/Blockchain In 7 Minutes _ What Is Blockchain _ Blockchain Explained_How Blockchain Works_Simplilearn.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>BlockChain Development</p>
+          </div>
+
+          <div class="video-card">
+            <video muted loop autoplay>
+              <source
+                src="/videos/Python - Introduction - W3Schools.com.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>Python Programming</p>
+          </div>
+
+          <!-- duplicate -->
+          <div class="video-card">
+            <video muted loop autoplay>
+              <source
+                src="/videos/What does a Game Designer REALLY do_ (1).mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>Game Developer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer-section">
+          <h3>Quick Link</h3>
+          <ul>
+            <li><a href="/About.html">About Us</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-condition.html">Terms &amp; Condition</a></li>
+            <li><a href="/FAQs-Help.html">FAQs &amp; Help</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <div class="contact-info">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+              />
+            </svg>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=City+Point+Sukkur"
+              target="_blank"
+              rel="noopener"
+              style="color: inherit; text-decoration: none"
+            >
+              123, City Point, Sukkur
+            </a>
+          </div>
+
+          <div class="contact-info">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M6.62 10.79a15.91 15.91 0 0 0 6.59 6.59l1.84-1.84a1 1 0 0 1 1.11-.21c1.2.48 2.5.74 3.85.74a1 1 0 0 1 1 1v3.25a1 1 0 0 1-1 1C10.07 21.75 2.25 13.93 2.25 4a1 1 0 0 1 1-1h3.25a1 1 0 0 1 1 1c0 1.35.25 2.65.74 3.85a1 1 0 0 1-.21 1.11z"
+              />
+            </svg>
+            <a
+              href="tel:+921000000000"
+              style="color: inherit; text-decoration: none"
+            >
+              +92 1000000000
+            </a>
+          </div>
+
+          <div class="contact-info" style="gap: 8px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5z"
+              />
+            </svg>
+            <a
+              href="mailto:maliktooba26@gmail.com"
+              style="color: inherit; text-decoration: none"
+            >
+              maliktooba26@gmail.com
+            </a>
+          </div>
+
+          <div class="social-icons" aria-label="Social media links">
+            <a href="#" title="Twitter" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" title="Facebook" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" title="YouTube" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" title="LinkedIn" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Subscribe to our Newsletter</h3>
+          <p class="subscribe-text">
+            Subscribe now and join our growing community of learners committed
+            to lifelong education!
+          </p>
+          <form
+            class="subscribe-form"
+            action="#"
+            method="post"
+            id="subscribeForm"
+          >
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <button
+        class="back-to-top"
+        aria-label="Back to top"
+        title="Back to top"
+        id="backToTop"
+      >
+        &#8679;
+      </button>
+
+      <div class="copyright">
+        &copy;
+        <a href="/index.html" target="_blank" rel="noopener noreferrer"
+          >EdVora</a
+        >, All Rights Reserved.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS (REQUIRED for carousel auto-slide) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Initialize Icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

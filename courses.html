@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EdVora | Courses</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google font for the logo -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="courses.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="nav">
+      <div class="logo"><a href="#">EdVora</a></div>
+
+      <!-- Hamburger checkbox (visually hidden but operable) -->
+      <input type="checkbox" id="menu-toggle" class="sr-only" />
+      <label for="menu-toggle" class="hamburger" aria-hidden="true"
+        >&#9776;</label
+      >
+
+      <!-- Main menu -->
+      <nav class="menu" role="navigation" aria-label="Primary">
+        <a href="/index.html">Home</a>
+        <a href="/About.html">About</a>
+
+        <!-- Top-level Courses link (separate from Pages dropdown) -->
+        <a href="/courses.html" class="courses-link">Courses</a>
+
+        <!-- Dropdown: keep input, label and content together in this block -->
+        <div class="dropdown">
+          <!-- Checkbox toggle for this dropdown (visually hidden but still in DOM) -->
+          <input
+            type="checkbox"
+            id="dropdown-toggle-pages"
+            class="dropdown-toggle sr-only"
+          />
+          <label
+            for="dropdown-toggle-pages"
+            class="dropbtn"
+            aria-haspopup="true"
+            >Pages</label
+          >
+
+          <div class="dropdown-content" role="menu" aria-label="Pages submenu">
+            <a href="Team.html" role="menuitem">Our Team</a>
+            <a href="testimonial.html" role="menuitem">Testimonial</a>
+          </div>
+        </div>
+
+        <a href="contact.html">Contact</a>
+
+        <!-- Login icon -->
+        <a href="login.html" class="login-icon" aria-label="Login">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            aria-hidden="true"
+          >
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3z" />
+            <path fill-rule="evenodd" d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <!-- HERO / CAROUSEL-->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./Images/Carousel-image.jpg"
+            class="d-block w-100"
+            alt="Hero"
+          />
+          <div class="carousel-caption">
+            <h5>Learn Smarter, Grow Faster</h5>
+            <p>Industry-ready skills for tomorrow’s jobs</p>
+            <a href="#courses" class="btn btn-warning btn-lg mt-3"
+              >Browse Courses</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3">
+            <h3>500+</h3>
+            <p>Courses</p>
+          </div>
+          <div class="col-md-3">
+            <h3>1M+</h3>
+            <p>Learners</p>
+          </div>
+          <div class="col-md-3">
+            <h3>200+</h3>
+            <p>Instructors</p>
+          </div>
+          <div class="col-md-3">
+            <h3>95%</h3>
+            <p>Success Rate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICS -->
+    <section class="container section-padding">
+      <h5 class="section-title-with-lines">Trending</h5>
+      <h2 class="text-center mb-4">Popular Topics</h2>
+
+      <div class="topics d-flex flex-wrap justify-content-center">
+        <button class="btn btn-outline-secondary m-2">Python</button>
+        <button class="btn btn-outline-secondary m-2">Web Dev</button>
+        <button class="btn btn-outline-secondary m-2">AWS</button>
+        <button class="btn btn-outline-secondary m-2">UI / UX</button>
+        <button class="btn btn-outline-secondary m-2">AI & ML</button>
+        <button class="btn btn-outline-secondary m-2">Cyber Security</button>
+      </div>
+    </section>
+
+    <!-- LEARNING PATHS-->
+    <section class="container section-padding">
+      <h5 class="section-title-with-lines">Guided Paths</h5>
+      <h2 class="text-center mb-4">Choose Your Learning Path</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="path-card">
+            <h5>Frontend Developer</h5>
+            <p>HTML → CSS → JavaScript → React</p>
+            <span>⏱ 3 Months</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="path-card">
+            <h5>CyberSecurity</h5>
+            <p>Networking → Security Basics → Ethical Hacking → SIEM & SOC</p>
+            <span>⏱ 4 Months</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="path-card">
+            <h5>BlockChain</h5>
+            <p>Programming → Solidity → Web3 → DApps & DeFi</p>
+            <span>⏱ 5 Months</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="path-card">
+            <h5>Agentic AI</h5>
+            <p>Python → LLMs → Tools → Autonomous Agents</p>
+            <span>⏱ 5 Months</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="path-card">
+            <h5>AI & Data Science</h5>
+            <p>Math → Python → ML → DL → Deployment</p>
+            <span>⏱ 5 Months</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="path-card">
+            <h5>Game Development</h5>
+            <p>Programming → Game Engine → Gameplay Systems → Publish</p>
+            <span>⏱ 5 Months</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="container section-padding">
+      <h5 class="section-title-with-lines">Courses</h5>
+      <h2 class="text-center mb-4">Trending Courses</h2>
+
+      <div class="row">
+        <!-- WMA Course -->
+        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+          <div class="course-card">
+            <div class="course-image">
+              <span class="badge-free">FREE</span>
+              <img src="./Images/WMA.webp" alt="WMA Course" />
+            </div>
+            <div class="course-content">
+              <h5>Web and App Development</h5>
+              <div class="course-meta">
+                <span>⭐ 4.6</span>
+                <span>👨‍🎓 5.8L+</span>
+                <span>Beginner</span>
+              </div>
+              <div class="course-footer">
+                <span>⏱ 12 months</span>
+                <span>Rs. 0</span>
+              </div>
+              <a href="#" class="enroll-btn">Enroll Now →</a>
+            </div>
+          </div>
+        </div>
+        <!-- PY Course -->
+        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+          <div class="course-card">
+            <div class="course-image">
+              <span class="badge-free">FREE</span>
+              <img src="./Images/PY.webp" alt="PY Course" />
+            </div>
+            <div class="course-content">
+              <h5>Python Programming</h5>
+              <div class="course-meta">
+                <span>⭐ 4.6</span>
+                <span>👨‍🎓 5.8L+</span>
+                <span>Beginner</span>
+              </div>
+              <div class="course-footer">
+                <span>⏱ 3 months</span>
+                <span>Rs. 0</span>
+              </div>
+              <a href="#" class="enroll-btn">Enroll Now →</a>
+            </div>
+          </div>
+        </div>
+        <!-- UI/UX course -->
+        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+          <div class="course-card">
+            <div class="course-image">
+              <span class="badge-free">FREE</span>
+              <img src="./Images/UIUXA.webp" alt="UI/UX Course" />
+            </div>
+            <div class="course-content">
+              <h5>UI/UX Design with AI</h5>
+              <div class="course-meta">
+                <span>⭐ 4.6</span>
+                <span>👨‍🎓 5.8L+</span>
+                <span>Beginner</span>
+              </div>
+              <div class="course-footer">
+                <span>⏱ 4 months</span>
+                <span>Rs. 0</span>
+              </div>
+              <a href="#" class="enroll-btn">Enroll Now →</a>
+            </div>
+          </div>
+        </div>
+        <!-- AGI course -->
+        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+          <div class="course-card">
+            <div class="course-image">
+              <span class="badge-free">FREE</span>
+              <img src="./Images/AGI.webp" alt="AGI Course" />
+            </div>
+            <div class="course-content">
+              <h5>Agentic AI</h5>
+              <div class="course-meta">
+                <span>⭐ 4.6</span>
+                <span>👨‍🎓 5.8L+</span>
+                <span>Beginner</span>
+              </div>
+              <div class="course-footer">
+                <span>⏱ 5 months</span>
+                <span>Rs. 0</span>
+              </div>
+              <a href="#" class="enroll-btn">Enroll Now →</a>
+            </div>
+          </div>
+        </div>
+        <!-- CS course -->
+        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+          <div class="course-card">
+            <div class="course-image">
+              <span class="badge-free">FREE</span>
+              <img src="./Images/CS.webp" alt="CS Course" />
+            </div>
+            <div class="course-content">
+              <h5>Cyber Security</h5>
+              <div class="course-meta">
+                <span>⭐ 4.6</span>
+                <span>👨‍🎓 5.8L+</span>
+                <span>Beginner</span>
+              </div>
+              <div class="course-footer">
+                <span>⏱ 4 months</span>
+                <span>Rs. 0</span>
+              </div>
+              <a href="#" class="enroll-btn">Enroll Now →</a>
+            </div>
+          </div>
+        </div>
+        <!-- NE course -->
+        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+          <div class="course-card">
+            <div class="course-image">
+              <span class="badge-free">FREE</span>
+              <img src="./Images/NE.webp" alt="NE Course" />
+            </div>
+            <div class="course-content">
+              <h5>Networking Essentioals</h5>
+              <div class="course-meta">
+                <span>⭐ 4.6</span>
+                <span>👨‍🎓 5.8L+</span>
+                <span>Beginner</span>
+              </div>
+              <div class="course-footer">
+                <span>⏱ 5 Hrs</span>
+                <span>Rs. 0</span>
+              </div>
+              <a href="#" class="enroll-btn">Enroll Now →</a>
+            </div>
+          </div>
+        </div>
+        <!-- CBD course -->
+        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+          <div class="course-card">
+            <div class="course-image">
+              <span class="badge-free">FREE</span>
+              <img src="./Images/CBD.webp" alt="CBD Course" />
+            </div>
+            <div class="course-content">
+              <h5>Blockchain Development</h5>
+              <div class="course-meta">
+                <span>⭐ 4.6</span>
+                <span>👨‍🎓 5.8L+</span>
+                <span>Beginner</span>
+              </div>
+              <div class="course-footer">
+                <span>⏱ 6 months</span>
+                <span>Rs. 0</span>
+              </div>
+              <a href="#" class="enroll-btn">Enroll Now →</a>
+            </div>
+          </div>
+        </div>
+        <!-- AI course -->
+        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+          <div class="course-card">
+            <div class="course-image">
+              <span class="badge-free">FREE</span>
+              <img src="./Images/AI.webp" alt="AI Course" />
+            </div>
+            <div class="course-content">
+              <h5>AI & Data Science</h5>
+              <div class="course-meta">
+                <span>⭐ 4.6</span>
+                <span>👨‍🎓 5.8L+</span>
+                <span>Beginner</span>
+              </div>
+              <div class="course-footer">
+                <span>⏱ 10 months</span>
+                <span>Rs. 0</span>
+              </div>
+              <a href="#" class="enroll-btn">Enroll Now →</a>
+            </div>
+          </div>
+        </div>
+        <!-- GD course -->
+        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+          <div class="course-card">
+            <div class="course-image">
+              <span class="badge-free">FREE</span>
+              <img src="./Images/GD.webp" alt="GD Course" />
+            </div>
+            <div class="course-content">
+              <h5>Game Development</h5>
+              <div class="course-meta">
+                <span>⭐ 4.6</span>
+                <span>👨‍🎓 5.8L+</span>
+                <span>Beginner</span>
+              </div>
+              <div class="course-footer">
+                <span>⏱ 6 months</span>
+                <span>Rs. 0</span>
+              </div>
+              <a href="#" class="enroll-btn">Enroll Now →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section text-center">
+      <h2>Start Learning Today</h2>
+      <p>Join millions upgrading their careers with EdVora</p>
+      <a href="#" class="btn btn-warning btn-lg">Get Started Free</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer-section">
+          <h3>Quick Link</h3>
+          <ul>
+            <li><a href="/About.html">About Us</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-condition.html">Terms &amp; Condition</a></li>
+            <li><a href="/FAQs-Help.html">FAQs &amp; Help</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <div class="contact-info">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+              />
+            </svg>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=City+Point+Sukkur"
+              target="_blank"
+              rel="noopener"
+              style="color: inherit; text-decoration: none"
+            >
+              123, City Point, Sukkur
+            </a>
+          </div>
+
+          <div class="contact-info">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M6.62 10.79a15.91 15.91 0 0 0 6.59 6.59l1.84-1.84a1 1 0 0 1 1.11-.21c1.2.48 2.5.74 3.85.74a1 1 0 0 1 1 1v3.25a1 1 0 0 1-1 1C10.07 21.75 2.25 13.93 2.25 4a1 1 0 0 1 1-1h3.25a1 1 0 0 1 1 1c0 1.35.25 2.65.74 3.85a1 1 0 0 1-.21 1.11z"
+              />
+            </svg>
+            <a
+              href="tel:+921000000000"
+              style="color: inherit; text-decoration: none"
+            >
+              +92 1000000000
+            </a>
+          </div>
+
+          <div class="contact-info" style="gap: 8px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5z"
+              />
+            </svg>
+            <a
+              href="mailto:maliktooba26@gmail.com"
+              style="color: inherit; text-decoration: none"
+            >
+              maliktooba26@gmail.com
+            </a>
+          </div>
+
+          <div class="social-icons" aria-label="Social media links">
+            <a href="#" title="Twitter" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" title="Facebook" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" title="YouTube" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" title="LinkedIn" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Subscribe to our Newsletter</h3>
+          <p class="subscribe-text">
+            Subscribe now and join our growing community of learners committed
+            to lifelong education!
+          </p>
+          <form
+            class="subscribe-form"
+            action="#"
+            method="post"
+            id="subscribeForm"
+          >
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <button
+        class="back-to-top"
+        aria-label="Back to top"
+        title="Back to top"
+        id="backToTop"
+      >
+        &#8679;
+      </button>
+
+      <div class="copyright">
+        &copy;
+        <a href="/index.html" target="_blank" rel="noopener noreferrer"
+          >EdVora</a
+        >, All Rights Reserved.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS (REQUIRED for carousel auto-slide) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Initialize Icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
