@@ -317,6 +317,11 @@ body{ margin:0; font-family: system-ui, Arial, sans-serif; color:#fff; }
     font-family: "poppins", serif;
 }
 
+#para {
+  text-align: center;
+  font-weight: bold;
+}
+
 .boxes {
     display: flex;
     flex-wrap: wrap;
@@ -603,4 +608,5 @@ body{ margin:0; font-family: system-ui, Arial, sans-serif; color:#fff; }
     .footer-section {
         margin: 20px 0;
     }
+
 }
